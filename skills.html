@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Varsha Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --Background: #181A2F;
+        --Primary: #242E49;
+        --Secondary: #37415C;
+        --Accent: #FDA481;
+        --CTA: #841820;
+        --CTA-Dark: #541628;
+        --Text: #ffffff;
+        --SkillRed: linear-gradient(135deg, #FDA481 0%, #841820 100%);
+        --HoverSkill: linear-gradient(135deg, #FFD8C0 0%, #FFB7A1 100%);
+      }
+
+      @font-face {
+        font-family: 'IvyMode';
+        src: url('https://fonts.cdnfonts.com/s/92489/IvyMode-Regular.woff') format('woff');
+      }
+
+      @font-face {
+        font-family: 'RoxboroughCF';
+        src: url('https://fonts.cdnfonts.com/s/86389/Roxborough-CF-Regular.woff') format('woff');
+      }
+
+      body {
+        font-family: 'IvyMode', 'RoxboroughCF', serif;
+        background-color: var(--Background);
+        color: var(--Text);
+      }
+
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+      .tilt-card {
+        transition: transform 0.4s ease, background 0.4s ease, color 0.4s ease;
+        background: var(--SkillRed);
+        color: white;
+      }
+
+      .tilt-card:hover {
+        transform: rotateX(4deg) rotateY(4deg) scale(1.05);
+        background: var(--HoverSkill);
+        color: #181A2F;
+      }
+    </style>
+  </head>
+
+  <body class="min-h-screen overflow-x-hidden">
+    <!-- Navbar -->
+    <nav class="bg-[#242E49] text-white rounded-b-[20px] shadow-md px-6 md:px-12 py-5 z-50 relative">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+          <span class="text-[#FDA481] text-2xl font-light uppercase">Varsha</span>
+          <span class="text-white text-2xl font-medium uppercase">Portfolio</span>
+        </div>
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-white text-3xl">&#9776;</button>
+        </div>
+        <div class="hidden md:flex space-x-10 text-white text-base font-light" id="desktop-menu">
+          <a href="index.html" class="hover:text-[#841920]">HOME</a>
+          <a href="project.html" class="hover:text-[#841920]">PROJECTS</a>
+          <a href="resume.html" class="hover:text-[#841920]">RESUME</a>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden flex-col mt-4 space-y-6 text-white text-base font-light md:hidden">
+        <a href="index.html" class="hover:text-[#841920]">HOME</a>
+        <a href="project.html" class="hover:text-[#841920]">PROJECTS</a>
+        <a href="resume.html" class="hover:text-[#841920]">RESUME</a>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="max-w-6xl w-full mx-auto bg-Secondary bg-opacity-70 backdrop-blur-md shadow-2xl rounded-3xl p-10 mt-[10px]">
+      <h1 class="text-4xl font-extrabold text-center text-Accent mb-12 drop-shadow-xl">Skills</h1>
+
+      <!-- Skills -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center perspective-1000">
+        <div class="tilt-card p-6 rounded-2xl shadow-lg">
+          🎥 <p class="font-bold text-lg mt-2">Video Editing</p>
+        </div>
+        <div class="tilt-card p-6 rounded-2xl shadow-lg">
+          📈 <p class="font-bold text-lg mt-2">Marketing</p>
+        </div>
+        <div class="tilt-card p-6 rounded-2xl shadow-lg">
+          🎨 <p class="font-bold text-lg mt-2">Motion Graphics</p>
+        </div>
+        <div class="tilt-card p-6 rounded-2xl shadow-lg">
+          🎞 <p class="font-bold text-lg mt-2">Storytelling</p>
+        </div>
+        <div class="tilt-card p-6 rounded-2xl shadow-lg">
+          🎧 <p class="font-bold text-lg mt-2">Audio Syncing</p>
+        </div>
+        <div class="tilt-card p-6 rounded-2xl shadow-lg">
+          ✨ <p class="font-bold text-lg mt-2">Color Grading</p>
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <h2 class="text-3xl font-semibold text-center text-Accent mt-16 mb-6 drop-shadow-md">🛠 Software I Use</h2>
+      <div class="flex flex-wrap justify-center gap-4">
+        <span class="bg-black text-white px-6 py-3 rounded-full shadow-lg hover:scale-105 hover:shadow-2xl transition-transform duration-300">Premiere Pro (Pr)</span>
+        <span class="bg-black text-white px-6 py-3 rounded-full shadow-lg hover:scale-105 hover:shadow-2xl transition-transform duration-300">After Effects (Ae)</span>
+        <span class="bg-black text-white px-6 py-3 rounded-full shadow-lg hover:scale-105 hover:shadow-2xl transition-transform duration-300">Photoshop (Ps)</span>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        menuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      });
+    </script>
+  </body>
+</html>

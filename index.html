@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Varsha Portfolio</title>
+    <link rel="stylesheet" href="https://use.typekit.net/XXXXXX.css"> <!-- Replace with your Adobe Fonts project link that includes RoxboroughCF -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --Background: #181A2F;
+        --Primary: #242E49;
+        --Secondary: #37415C;
+        --Accent: #FDA481;
+        --CTA: #841820;
+        --CTA-Dark: #541628;
+        --Text: #ffffff;
+      }
+/* Roxborough CF - TTF version */
+@font-face {
+  font-family: 'RoxboroughCF';
+  src: url('./fonts/Roxborough\ CF.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Ivy Mode - TTF version */
+@font-face {
+  font-family: 'IvyMode';
+  src: url('./fonts/IvyMode-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+      .bg-Background {
+        background-color: var(--Background);
+      }
+      .bg-Primary {
+        background-color: var(--Primary);
+      }
+      .bg-Secondary {
+        background-color: var(--Secondary);
+      }
+      .bg-Accent {
+        background-color: var(--Accent);
+      }
+      .bg-CTA {
+        background-color: var(--CTA);
+      }
+      .bg-CTA-Dark {
+        background-color: var(--CTA-Dark);
+      }
+      .text-Text {
+        color: var(--Text);
+      }
+      .text-Accent {
+        color: var(--Accent);
+      }
+      body {
+  font-family: 'IvyMode', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'RoxboroughCF', serif;
+}
+
+
+      @media screen and (max-width: 1440px) {
+        .scale-desktop {
+          transform: scale(0.9);
+          transform-origin: top left;
+          height: 1024px;
+        }
+      }
+      @media screen and (max-width: 1366px) {
+        .scale-desktop {
+          transform: scale(0.85);
+          transform-origin: top left;
+          height: 1024px;
+        }
+      }
+      @media screen and (max-width: 1280px) {
+        .scale-desktop {
+          transform: scale(0.8);
+          transform-origin: top left;
+          height: 1024px;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-Background text-Text">
+    <div class="hidden md:flex justify-center items-start w-full h-screen overflow-auto bg-Background p-[20px]">
+      <div class="scale-desktop w-[1470px] h-[1024px] relative">
+        <div class="w-[1380px] h-24 left-[25px] top-[24px] absolute bg-Primary rounded-[20px] overflow-hidden">
+          <div class="w-[1343px] left-[18px] top-[42.03px] absolute inline-flex justify-between items-center">
+            <div class="justify-start">
+              <span class="text-Text text-2xl font-light  uppercase text-[#fca480]">Varsha</span>
+              <span></span>
+              <span class="text-Text text-2xl font-medium  uppercase"> Portfolio</span>
+            </div>
+            <div class="w-72 flex justify-between items-center">
+              <a href="index.html" class="hover:text-[#841920]">HOME</a>
+              <a href="project.html" class="hover:text-[#841920]">PROJECTS</a>
+              <a href="resume.html" class="hover:text-[#841920]">RESUME</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-[473px] h-[460px] left-[24px] top-[146px] absolute bg-Primary rounded-[20px] overflow-hidden">
+          <div class="w-[475px top-[100px] absolute justify-start p-[30px]">
+            <span class="text-Text text-2xl font-bold  leading-[56px] text-[#fca480]">Video editor and Marketing Enthusiast </span>
+            <span class="text-Text text-xl font-light  leading-[56px]">- Mixing creativity with strategy to make videos that pop and marketing that clicks — turning ideas into eye-catching magic!</span>
+          </div>
+          <div class="w-28 h-28 left-[416px] top-[34px] absolute overflow-hidden">
+            <div class="w-28 h-28 left-2 top-[0.04px] absolute"><img src="FLOWER-ICON.png"></div>
+          </div>
+        </div>
+
+        <div class="w-96 h-96 left-[512px] top-[144px] absolute bg-Primary rounded-[20px] overflow-hidden">
+          <div class="w-72 left-[24px] top-[130px] absolute justify-start text-Text text-l font-light  leading-normal">
+            As a passionate Video Editor, I bring stories to life through the art of visual storytelling. From crafting seamless transitions to enhancing narratives with dynamic effects, I specialize in creating engaging and impactful content that resonates with audiences.
+          </div>
+          <div class="w-9 h-9 left-[24px] top-[32px] absolute overflow-hidden">
+            <div class="w-9 h-9 left-0 top-0 absolute"><img src="Vector.png"></div>
+          </div>
+          <div class="left-[24px] top-[80px] absolute justify-start text-Accent text-3xl font-normal ">About me</div>
+        </div>
+
+        <div class="w-96 h-[440px] left-[512px] top-[550px] absolute bg-Secondary rounded-[20px] overflow-hidden flex items-center justify-center shadow-xl">
+          <div class="p-6 w-full text-center">
+            <h1 class="text-3xl font-semibold text-Accent mt-4 mb-4">My Projects</h1>
+            <div class="flex flex-col items-center gap-2">
+              <a href="skills.html" class="w-64">
+                <h2 class="w-full transition duration-300 transform hover:scale-105 bg-Accent text-white py-2 rounded-full text-lg font-medium shadow hover:shadow-lg cursor-pointer">Skills</h2>
+              </a>
+              <a href="experience.html" class="w-64">
+                <h2 class="w-full transition duration-300 transform hover:scale-105 bg-Accent text-white py-2 rounded-full text-lg font-medium shadow hover:shadow-lg cursor-pointer">Experiences</h2>
+              </a>
+              <a href="video.html" class="w-64">
+                <h2 class="w-full transition duration-300 transform hover:scale-105 bg-Accent text-white py-2 rounded-full text-lg font-medium shadow hover:shadow-lg cursor-pointer">Video Edits</h2>
+              </a>
+              <a href="podcast.html" class="w-64">
+                <h2 class="w-full transition duration-300 transform hover:scale-105 bg-Accent text-white py-2 rounded-full text-lg font-medium shadow hover:shadow-lg cursor-pointer">Podcast Edits</h2>
+              </a>
+              <a href="long.html" class="w-64">
+                <h2 class="w-full transition duration-300 transform hover:scale-105 bg-Accent text-white py-2 rounded-full text-lg font-medium shadow hover:shadow-lg cursor-pointer">Long Form Edits</h2>
+              </a>
+              <a href="design.html" class="w-64">
+                <h2 class="w-full transition duration-300 transform hover:scale-105 bg-Accent text-white py-2 rounded-full text-lg font-medium shadow hover:shadow-lg cursor-pointer">Designs</h2>
+              </a>
+              <a href="client.html" class="w-64">
+                <h2 class="w-full transition duration-300 transform hover:scale-105 bg-Accent text-white py-2 rounded-full text-lg font-medium shadow hover:shadow-lg cursor-pointer">My Clients</h2>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-96 h-[367px] left-[25px] top-[620px] absolute bg-CTA rounded-[20px] overflow-hidden flex flex-col items-center justify-center p-2 text-center">
+          <h1 class="text-3xl text-white">Let's Connect</h1>
+          <p class="text-white text-xl mb-2 mt-2">+91 7338178311</p>
+          <p class="text-white text-xl mb-4"> varshasangolli2805@gmail.com</p>
+          <textarea placeholder="Please message your queries..." class="w-full h-24 p-3 rounded-xl border border-pink-300 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-pink-400 resize-none mb-4"></textarea>
+          <button type="submit" class="bg-Accent hover:bg-CTA-Dark text-white font-semibold py-2 px-6 rounded-xl transition-all duration-300">Send Message</button>
+        </div>
+
+        <div class="w-80 h-[530px] left-[1030px] top-[261.78px] absolute rounded-[20px] overflow-hidden">
+          <img class="w-96 h-[556px] left-[-25px] top-[-19px] absolute" src="face.png" />
+        </div>
+
+        <div class="w-96 h-24 left-[960px] top-[890px] absolute bg-CTA-Dark rounded-[20px] overflow-hidden">
+          <div class="w-80 left-[30px] top-[37px] absolute inline-flex justify-between items-center">
+            <div class="justify-start text-white text-base font-light  uppercase">Instagram</div>
+            <div class="justify-start text-white text-base font-light  uppercase">Twitter</div>
+            <div class="justify-start text-white text-base font-light  uppercase">Linkedin</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- 📱 Mobile View -->
+<div class="md:hidden px-4 py-6 space-y-6">
+  <header class="bg-Card rounded-lg p-4 text-center">
+    <h1 class="text-2xl font-medium uppercase heading text-Highlight">Varsha</h1>
+    <nav class="flex justify-center gap-4 text-sm font-light mt-2">
+      <a href="index.html" class="hover:text-[#841920]">HOME</a>
+      <a href="project.html" class="hover:text-[#841920]">PROJECTS</a>
+      <a href="resume.html" class="hover:text-[#841920]">RESUME</a>
+    </nav>
+  </header>
+
+  <section class="bg-Card rounded-lg p-4 bg-Primary">
+    <h2 class="text-xl  mb-2 heading text-Highlight text-[#fca480]">About Me</h2>
+    <p class="text-sm font-light text-Text">
+      As a passionate Video Editor, I bring stories to life through the art of visual storytelling. From crafting seamless transitions to enhancing narratives with dynamic effects, I specialize in creating engaging and impactful content that resonates with audiences.
+    </p>
+  </section>
+
+  <section class="bg-Secondary rounded-[20px] p-4 shadow-lg mx-4 my-6">
+    <h2 class="text-2xl font-semibold text-center text-Accent mb-4">My Projects</h2>
+    <div class="flex flex-col items-center gap-3">
+      <a href="skills.html" class="w-full max-w-xs">
+        <h2 class="w-full transition duration-300 transform hover:scale-105 bg-Accent text-white py-2 rounded-full text-base font-medium shadow hover:shadow-lg cursor-pointer text-center">Skills</h2>
+      </a>
+      <a href="experience.html" class="w-full max-w-xs">
+        <h2 class="w-full transition duration-300 transform hover:scale-105 bg-Accent text-white py-2 rounded-full text-base font-medium shadow hover:shadow-lg cursor-pointer text-center">Experiences</h2>
+      </a>
+      <a href="video.html" class="w-full max-w-xs">
+        <h2 class="w-full transition duration-300 transform hover:scale-105 bg-Accent text-white py-2 rounded-full text-base font-medium shadow hover:shadow-lg cursor-pointer text-center">Video Edits</h2>
+      </a>
+      <a href="podcast.html" class="w-full max-w-xs">
+        <h2 class="w-full transition duration-300 transform hover:scale-105 bg-Accent text-white py-2 rounded-full text-base font-medium shadow hover:shadow-lg cursor-pointer text-center">Podcast Edits</h2>
+      </a>
+      <a href="long.html" class="w-full max-w-xs">
+        <h2 class="w-full transition duration-300 transform hover:scale-105 bg-Accent text-white py-2 rounded-full text-base font-medium shadow hover:shadow-lg cursor-pointer text-center">Long Form Edits</h2>
+      </a>
+      <a href="design.html" class="w-full max-w-xs">
+        <h2 class="w-full transition duration-300 transform hover:scale-105 bg-Accent text-white py-2 rounded-full text-base font-medium shadow hover:shadow-lg cursor-pointer text-center">Designs</h2>
+      </a>
+      <a href="client.html" class="w-full max-w-xs">
+        <h2 class="w-full transition duration-300 transform hover:scale-105 bg-Accent text-white py-2 rounded-full text-base font-medium shadow hover:shadow-lg cursor-pointer text-center">My Clients</h2>
+      </a>
+    </div>
+  </section>
+  
+
+  <section class="bg-CTA rounded-[20px] p-4 mx-4 my-6 text-center  shadow-lg">
+    <h1 class="text-2xl text-white">Let's Connect</h1>
+    <p class="text-white text-base mt-2 mb-1">+91 7338178311</p>
+    <p class="text-white text-base mb-4"> varshasangolli2805@gmail.com
+      
+     </p>
+    
+    <textarea 
+      placeholder="Please message your queries..." 
+      class="w-full h-24 p-3 rounded-xl border border-pink-300 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-pink-400 resize-none mb-4"
+    ></textarea>
+    
+    <button 
+      type="submit" 
+      class="w-full bg-Accent hover:bg-CTA-Dark text-white font-semibold py-2 px-6 rounded-xl transition-all duration-300"
+    >
+      Send Message
+    </button>
+  </section>
+  
+
+  <section class="bg-CTA-Dark rounded-lg p-4 text-center space-x-4 flex justify-center uppercase">
+    <span class="text-sm text-white">Instagram</span>
+    <span class="text-sm text-white">Twitter</span>
+    <span class="text-sm text-white">Linkedin</span>
+  </section>
+</div>
+
+  </body>
+</html>
+
+

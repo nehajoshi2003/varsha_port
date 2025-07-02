@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume - Varsha Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Fonts -->
+  <link href="https://fonts.cdnfonts.com/css/roxborough-cf" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/ivymode" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'IvyMode';
+      src: url('https://fonts.cdnfonts.com/s/92489/IvyMode-Regular.woff') format('woff');
+    }
+    @font-face {
+      font-family: 'RoxboroughCF';
+      src: url('https://fonts.cdnfonts.com/s/86389/Roxborough-CF-Regular.woff') format('woff');
+    }
+    body {
+      font-family: 'IvyMode', serif;
+    }
+    h1, h2, h3 {
+      font-family: 'RoxboroughCF', serif;
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-[#181A2F] text-white min-h-screen">
+
+  <!-- Simple Navbar -->
+  <nav class="bg-[#242E49] text-white rounded-b-[20px] shadow-md px-6 md:px-12 py-5 z-50 relative">
+    <div class="flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <span class="text-[#FDA481] text-2xl font-light uppercase">Varsha</span>
+        <span class="text-white text-2xl font-medium uppercase">Portfolio</span>
+      </div>
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-white text-3xl">&#9776;</button>
+      </div>
+      <div class="hidden md:flex space-x-10 text-white text-base font-light" id="desktop-menu">
+        <a href="index.html" class="hover:text-[#841920]">HOME</a>
+        <a href="project.html" class="hover:text-[#841920]">PROJECTS</a>
+        <a href="resume.html" class="hover:text-[#841920]">RESUME</a>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden flex-col mt-4 space-y-6 text-white text-base font-light md:hidden">
+      <a href="index.html" class="hover:text-[#841920]">HOME</a>
+      <a href="project.html" class="hover:text-[#841920]">PROJECTS</a>
+      <a href="resume.html" class="hover:text-[#841920]">RESUME</a>
+    </div>
+  </nav>
+
+  <!-- Resume PDF Embed -->
+  <section class="max-w-5xl mx-auto mt-10 px-4">
+    <h1 class="text-4xl text-center text-[#FDA481] mb-6">Resume</h1>
+    <div class="rounded-lg shadow-lg overflow-hidden">
+      <iframe src="varsha_res.pdf" class="w-full h-[1200px]" frameborder="0"></iframe>
+    </div>
+    <!-- Download Button -->
+  
+  </section>
+
+</body>
+</html>

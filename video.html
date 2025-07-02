@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Edits - Varsha Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --Background: #181A2F;
+      --Primary: #242E49;
+      --Secondary: #37415C;
+      --Accent: #FDA481;
+      --CTA: #841820;
+      --CTA-Dark: #541628;
+      --Text: #ffffff;
+    }
+
+    @font-face {
+  font-family: 'RoxboroughCF';
+  src: url('./fonts/Roxborough\ CF.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Ivy Mode - TTF version */
+@font-face {
+  font-family: 'IvyMode';
+  src: url('./fonts/IvyMode-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}  
+ body {
+  font-family: 'IvyMode', sans-serif;
+  background-color: var(--Background);
+      color: var(--Text);
+}
+
+h1, h2, h3 {
+  font-family: 'RoxboroughCF', serif;
+  background-color: var(--Background);
+      color: var(--Text);
+}
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    .zoom-hover {
+      transition: transform 0.3s ease;
+    }
+
+    .zoom-hover:hover {
+      transform: scale(1.05);
+    }
+
+    .fade-scale-enter {
+      animation: fadeScaleIn 0.3s ease forwards;
+    }
+
+    @keyframes fadeScaleIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ✅ NAVBAR -->
+  <nav class="bg-Primary text-Text rounded-b-[20px] shadow-md px-6 md:px-12 py-5">
+    <div class="flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <span class="text-2xl font-light uppercase text-Accent">Varsha</span>
+        <span class="text-2xl font-medium uppercase">Portfolio</span>
+      </div>
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-Text text-3xl">&#9776;</button>
+      </div>
+      <div class="hidden md:flex space-x-10 text-base font-light" id="desktop-menu">
+        <a href="index.html" class="hover:text-[#841920]">HOME</a>
+        <a href="project.html" class="hover:text-[#841920]">PROJECTS</a>
+        <a href="resume.html" class="hover:text-[#841920]">RESUME</a>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden flex-col mt-4 space-y-6 text-base font-light md:hidden">
+      <a href="index.html" class="hover:text-[#841920]">HOME</a>
+        <a href="project.html" class="hover:text-[#841920]">PROJECTS</a>
+        <a href="resume.html" class="hover:text-[#841920]">RESUME</a>
+    </div>
+  </nav>
+
+  <!-- ✨ Page Title -->
+  <h1 class="text-4xl font-bold text-center mt-10 mb-12 text-Accent">My Video Edits</h1>
+
+  <!-- 🎥 VIDEO GALLERY -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-4 pb-20">
+<!-- 🎞️ Reel 1 -->
+<div class="relative group rounded-xl shadow-md overflow-hidden zoom-hover">
+    <video autoplay loop muted playsinline class="w-full h-auto object-cover">
+      <source src="videos/Video-103.mp4" type="video/mp4" />
+    </video>
+    <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center flex-col opacity-0 group-hover:opacity-100 transition duration-300">
+      <p class="text-xl text-white font-semibold text-center px-4 mb-4">Click below to view full video</p>
+      <button onclick="openModal('videos/Video-103.mp4')" class="px-4 py-2 bg-white text-black rounded-full font-medium hover:bg-[#841920]">View Video Edit</button>
+    </div>
+  </div>
+
+  <!-- 🎞️ Reel 2 -->
+  <div class="relative group rounded-xl shadow-md overflow-hidden zoom-hover">
+    <video autoplay loop muted playsinline class="w-full h-auto object-cover">
+      <source src="videos/Video-204.mp4" type="video/mp4" />
+    </video>
+    <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center flex-col opacity-0 group-hover:opacity-100 transition duration-300">
+      <p class="text-xl text-white font-semibold text-center px-4 mb-4">Click below to view full video</p>
+      <button onclick="openModal('videos/Video-204.mp4')" class="px-4 py-2 bg-white text-black rounded-full font-medium hover:bg-[#841920]">View Video Edit</button>
+    </div>
+  </div>
+
+  <!-- 🎞️ Reel 3 -->
+  <div class="relative group rounded-xl shadow-md overflow-hidden zoom-hover">
+    <video autoplay loop muted playsinline class="w-full h-auto object-cover">
+      <source src="videos/Video-261.mp4" type="video/mp4" />
+    </video>
+    <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center flex-col opacity-0 group-hover:opacity-100 transition duration-300">
+      <p class="text-xl text-white font-semibold text-center px-4 mb-4">Click below to view full video</p>
+      <button onclick="openModal('videos/Video-261.mp4')" class="px-4 py-2 bg-white text-black rounded-full font-medium hover:bg-[#841920]">View Video Edit</button>
+    </div>
+  </div>
+
+  <!-- Reel4-->
+  <div class="relative group rounded-xl shadow-md overflow-hidden zoom-hover">
+      <video autoplay loop muted playsinline class="w-full h-auto object-cover">
+        <source src="videos/Video-465.mp4" type="video/mp4" />
+      </video>
+      <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center flex-col opacity-0 group-hover:opacity-100 transition duration-300">
+        <p class="text-xl text-white font-semibold text-center px-4 mb-4">Click below to view full video</p>
+        <button onclick="openModal('videos/Video-465.mp4')" class="px-4 py-2 bg-white text-black rounded-full font-medium hover:bg-[#841920]">View Video Edit</button>
+      </div>
+    </div>
+        <!-- Reel5-->
+  <div class="relative group rounded-xl shadow-md overflow-hidden zoom-hover">
+      <video autoplay loop muted playsinline class="w-full h-auto object-cover">
+        <source src="videos/Video-506.mp4" type="video/mp4" />
+      </video>
+      <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center flex-col opacity-0 group-hover:opacity-100 transition duration-300">
+        <p class="text-xl text-white font-semibold text-center px-4 mb-4">Click below to view full video</p>
+        <button onclick="openModal('videos/Video-506.mp4')" class="px-4 py-2 bg-white text-black rounded-full font-medium hover:bg-[#841920]">View Video Edit</button>
+      </div>
+    </div>
+        <!-- Reel6-->
+  <div class="relative group rounded-xl shadow-md overflow-hidden zoom-hover">
+      <video autoplay loop muted playsinline class="w-full h-auto object-cover">
+        <source src="videos/Video-624.mp4" type="video/mp4" />
+      </video>
+      <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center flex-col opacity-0 group-hover:opacity-100 transition duration-300">
+        <p class="text-xl text-white font-semibold text-center px-4 mb-4">Click below to view full video</p>
+        <button onclick="openModal('videos/Video-624.mp4')" class="px-4 py-2 bg-white text-black rounded-full font-medium hover:bg-[#841920]">View Video Edit</button>
+      </div>
+    </div>
+        <!-- Reel7-->
+  <div class="relative group rounded-xl shadow-md overflow-hidden zoom-hover">
+      <video autoplay loop muted playsinline class="w-full h-auto object-cover">
+        <source src="videos/Video-706.mp4" type="video/mp4" />
+      </video>
+      <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center flex-col opacity-0 group-hover:opacity-100 transition duration-300">
+        <p class="text-xl text-white font-semibold text-center px-4 mb-4">Click below to view full video</p>
+        <button onclick="openModal('videos/Video-706.mp4')" class="px-4 py-2 bg-white text-black rounded-full font-medium hover:bg-[#841920]">View Video Edit</button>
+      </div>
+    </div>
+        <!-- Reel8-->
+  <div class="relative group rounded-xl shadow-md overflow-hidden zoom-hover">
+      <video autoplay loop muted playsinline class="w-full h-auto object-cover">
+        <source src="videos/Video-722.mp4" type="video/mp4" />
+      </video>
+      <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center flex-col opacity-0 group-hover:opacity-100 transition duration-300">
+        <p class="text-xl text-white font-semibold text-center px-4 mb-4">Click below to view full video</p>
+        <button onclick="openModal('videos/Video-722.mp4')" class="px-4 py-2 bg-white text-black rounded-full font-medium hover:bg-[#841920]">View Video Edit</button>
+      </div>
+    </div>
+        <!-- Reel9-->
+  <div class="relative group rounded-xl shadow-md overflow-hidden zoom-hover">
+      <video autoplay loop muted playsinline class="w-full h-auto object-cover">
+        <source src="videos/Video-82.mp4" type="video/mp4" />
+      </video>
+      <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center flex-col opacity-0 group-hover:opacity-100 transition duration-300">
+        <p class="text-xl text-white font-semibold text-center px-4 mb-4">Click below to view full video</p>
+        <button onclick="openModal('videos/Video-82.mp4')" class="px-4 py-2 bg-white text-black rounded-full font-medium hover:bg-[#841920]">View Video Edit</button>
+      </div>
+    </div>
+        <!-- Reel10-->
+  <div class="relative group rounded-xl shadow-md overflow-hidden zoom-hover">
+      <video autoplay loop muted playsinline class="w-full h-auto object-cover">
+        <source src="videos/Video-873.mp4" type="video/mp4" />
+      </video>
+      <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center flex-col opacity-0 group-hover:opacity-100 transition duration-300">
+        <p class="text-xl text-white font-semibold text-center px-4 mb-4">Click below to view full video</p>
+        <button onclick="openModal('videos/Video-873.mp4')" class="px-4 py-2 bg-white text-black rounded-full font-medium hover:bg-[#841920]">View Video Edit</button>
+      </div>
+    </div>
+        <!-- Reel11-->
+  <div class="relative group rounded-xl shadow-md overflow-hidden zoom-hover">
+      <video autoplay loop muted playsinline class="w-full h-auto object-cover">
+        <source src="videos/Video-883.mp4" type="video/mp4" />
+      </video>
+      <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center flex-col opacity-0 group-hover:opacity-100 transition duration-300">
+        <p class="text-xl text-white font-semibold text-center px-4 mb-4">Click below to view full video</p>
+        <button onclick="openModal('videos/Video-883.mp4')" class="px-4 py-2 bg-white text-black rounded-full font-medium hover:bg-[#841920]">View Video Edit</button>
+      </div>
+    </div>
+        <!-- Reel12-->
+  <div class="relative group rounded-xl shadow-md overflow-hidden zoom-hover">
+      <video autoplay loop muted playsinline class="w-full h-auto object-cover">
+        <source src="videos/Video-89.mp4" type="video/mp4" />
+      </video>
+      <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center flex-col opacity-0 group-hover:opacity-100 transition duration-300">
+        <p class="text-xl text-white font-semibold text-center px-4 mb-4">Click below to view full video</p>
+        <button onclick="openModal('videos/Video-89.mp4')" class="px-4 py-2 bg-white text-black rounded-full font-medium hover:bg-[#841920]">View Video Edit</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ MODAL VIDEO PLAYER -->
+  <div id="videoModal" class="fixed inset-0 bg-black/60 backdrop-blur-md flex items-center justify-center hidden z-50">
+    <div id="modalContent" class="relative w-full max-w-3xl mx-auto bg-Primary p-4 rounded-xl overflow-hidden fade-scale-enter text-Text">
+      <video id="modalVideo" controls autoplay class="w-full h-[600px] rounded-xl shadow-xl z-40"></video>
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-white text-3xl font-bold z-50 hover:scale-110 transition">&times;</button>
+    </div>
+  </div>
+
+  <!-- ✅ SCRIPTS -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    });
+
+    function openModal(videoSrc) {
+      const modal = document.getElementById('videoModal');
+      const video = document.getElementById('modalVideo');
+      const modalContent = document.getElementById('modalContent');
+
+      video.src = videoSrc;
+      video.load();
+      video.play();
+
+      modal.classList.remove('hidden');
+      modalContent.classList.add('fade-scale-enter');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('videoModal');
+      const video = document.getElementById('modalVideo');
+      const modalContent = document.getElementById('modalContent');
+
+      video.pause();
+      video.currentTime = 0;
+      video.src = '';
+
+      modal.classList.add('hidden');
+      modalContent.classList.remove('fade-scale-enter');
+    }
+
+    document.getElementById('videoModal').addEventListener('click', function (e) {
+      if (e.target.id === 'videoModal') {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>
