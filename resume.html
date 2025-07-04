@@ -11,34 +11,29 @@
   <link href="https://fonts.cdnfonts.com/css/ivymode" rel="stylesheet">
 
   <style>
-  @font-face {
-  font-family: 'RoxboroughCF';
-  src: url('./fonts/Roxborough\ CF.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+    @font-face {
+      font-family: 'RoxboroughCF';
+      src: url('./fonts/Roxborough CF.ttf') format('truetype');
+    }
 
-/* Ivy Mode - TTF version */
-@font-face {
-  font-family: 'IvyMode';
-  src: url('./fonts/IvyMode-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-body {
-  font-family: 'IvyMode', sans-serif;
-  background-color: #181A2F;
-  color: #ffffff;
+    @font-face {
+      font-family: 'IvyMode';
+      src: url('./fonts/IvyMode-Regular.ttf') format('truetype');
+    }
 
+    body {
+      font-family: 'IvyMode', sans-serif;
+      background-color: #181A2F;
+      color: #ffffff;
+    }
 
+    h1, h2, h3 {
+      font-family: 'RoxboroughCF', serif;
+    }
 
-}
-
-h1, h2, h3 {
-  font-family: 'RoxboroughCF', serif;
-}
-   
-     
+    ::-webkit-scrollbar {
+      display: none;
+    }
   </style>
 </head>
 
@@ -77,30 +72,38 @@ h1, h2, h3 {
       </header>
     </div>
   </nav>
-  
 
-  <!-- ✅ Resume Content -->
+  <!-- ✅ Resume Section -->
   <section class="max-w-5xl mx-auto mt-10 px-4 pb-16">
     <h1 class="text-4xl text-center text-[#FDA481] mb-6">Resume</h1>
 
-    <!-- 📄 Embedded PDF -->
-    <div class="rounded-lg shadow-lg overflow-hidden border border-[#FDA481]">
-      <iframe src="varsha_res.pdf" 
-              class="w-full h-[500px] sm:h-[700px] md:h-[1000px]" 
+    <!-- 👩‍💼 Desktop/Tablet View: Embedded PDF -->
+    <div class="hidden sm:block rounded-lg shadow-lg overflow-hidden border border-[#FDA481]">
+      <iframe src="varsha_res.pdf"
+              class="w-full h-[700px] md:h-[1000px]"
               frameborder="0">
       </iframe>
     </div>
 
-    <!-- ⬇️ Download Button -->
+    <!-- 📱 Mobile View: Fallback View Button -->
+    <div class="block sm:hidden text-center mt-6">
+      <p class="mb-2 text-[#FDA481] font-medium">Your device does not support embedded PDFs.</p>
+      <a href="varsha_res.pdf" target="_blank"
+         class="inline-block bg-[#FDA481] hover:bg-[#841820] text-white font-semibold py-2 px-6 rounded-lg transition">
+        View Resume
+      </a>
+    </div>
+
+    <!-- ⬇️ Download Button (Common for all) -->
     <div class="text-center mt-6">
-      <a href="varsha_res.pdf" download 
+      <a href="varsha_res.pdf" download
          class="inline-block bg-[#FDA481] hover:bg-[#841820] text-white font-semibold py-2 px-6 rounded-lg transition">
         Download Resume
       </a>
     </div>
   </section>
 
-  <!-- ✅ JS Toggle Script -->
+  <!-- ✅ Toggle Script -->
   <script>
     document.getElementById("menu-btn").addEventListener("click", function () {
       document.getElementById("mobile-menu").classList.toggle("hidden");
