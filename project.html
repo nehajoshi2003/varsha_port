@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects - Varsha Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.cdnfonts.com/css/roxborough-cf" rel="stylesheet">
@@ -22,26 +22,40 @@
     ::-webkit-scrollbar {
       display: none;
     }
-    .tilt-box {
-      transform-style: preserve-3d;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    h2 {
+      font-family: 'RoxboroughCF';
     }
-    .tilt-box:hover {
-      transform: rotateY(6deg) rotateX(6deg) scale(1.05);
-      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+    /* Gradient animation */
+    .animated-bg {
+      background: linear-gradient(135deg, #181A2F, #242E49, #541628);
+      background-size: 400% 400%;
+      animation: gradientShift 10s ease infinite;
     }
-    .fade-in {
-      animation: fadeIn 1.2s ease-out both;
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+
+    /* Project card hover */
+    .project-card {
+      transition: all 0.3s ease;
+      background-color: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(8px);
+    }
+
+    .project-card:hover {
+      background-color: #541628;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 164, 129, 0.3);
     }
   </style>
 </head>
-<body class="bg-[#181A2F] text-white min-h-screen">
+<body class="bg-[#181A2F] text-white min-h-screen overflow-x-hidden">
 
-  <!-- Navbar -->
+  <!-- ✅ Navbar -->
   <nav class="bg-[#242E49] text-white rounded-b-[20px] shadow-md px-6 md:px-12 py-5">
     <div class="flex justify-between items-center">
       <div class="flex items-center space-x-2">
@@ -57,42 +71,50 @@
         <a href="resume.html" class="hover:text-[#841920]">RESUME</a>
       </div>
     </div>
-    <div id="mobile-menu" class="hidden flex-col mt-4 space-y-6 text-white text-base font-light md:hidden">
-        <a href="index.html" class="hover:text-[#841920]">HOME</a>
-              <a href="project.html" class="hover:text-[#841920]">PROJECTS</a>
-              <a href="resume.html" class="hover:text-[#841920]">RESUME</a>
+
+    <!-- ✅ Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 py-6 space-y-6">
+      <header class="bg-[#37415C] rounded-lg p-4 text-center">
+        <h1 class="text-2xl font-medium uppercase text-[#FDA481]">Varsha</h1>
+        <nav class="flex flex-col gap-4 text-sm font-light mt-4">
+          <a href="index.html" class="hover:text-[#841920]">HOME</a>
+          <a href="project.html" class="hover:text-[#841920]">PROJECTS</a>
+          <a href="resume.html" class="hover:text-[#841920]">RESUME</a>
+        </nav>
+      </header>
     </div>
   </nav>
 
-  <!-- Projects Section -->
-  <section class="bg-[#FDA481] rounded-[20px] p-8 shadow-2xl max-w-5xl mx-auto mt-12 fade-in">
-    <h2 class="text-4xl font-bold text-center text-[#841820] mb-10 drop-shadow-lg"> My Projects</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      <a href="skills.html" class="tilt-box bg-white text-[#841820] text-center p-6 rounded-2xl shadow-lg hover:shadow-2xl">
+  <!-- ✅ Projects Section -->
+  <section class="animated-bg rounded-[20px] px-6 py-16 shadow-2xl max-w-7xl mx-auto mt-10 relative overflow-hidden">
+    <h2 class="text-4xl font-bold text-center text-[#FDA481] mb-12 drop-shadow-xl z-10 relative">My Projects</h2>
+
+    <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 z-10 relative">
+      <a href="skills.html" class="project-card p-6 rounded-2xl text-center text-white">
         <h2 class="font-semibold text-xl">Skills</h2>
       </a>
-      <a href="experience.html" class="tilt-box bg-white text-[#841820] text-center p-6 rounded-2xl shadow-lg hover:shadow-2xl">
+      <a href="experience.html" class="project-card p-6 rounded-2xl text-center text-white sm:translate-y-6">
         <h2 class="font-semibold text-xl">Experiences</h2>
       </a>
-      <a href="video.html" class="tilt-box bg-white text-[#841820] text-center p-6 rounded-2xl shadow-lg hover:shadow-2xl">
+      <a href="video.html" class="project-card p-6 rounded-2xl text-center text-white">
         <h2 class="font-semibold text-xl">Video Edits</h2>
       </a>
-      <a href="podcast.html" class="tilt-box bg-white text-[#841820] text-center p-6 rounded-2xl shadow-lg hover:shadow-2xl">
+      <a href="podcast.html" class="project-card p-6 rounded-2xl text-center text-white sm:translate-y-6">
         <h2 class="font-semibold text-xl">Podcast Edits</h2>
       </a>
-      <a href="long.html" class="tilt-box bg-white text-[#841820] text-center p-6 rounded-2xl shadow-lg hover:shadow-2xl">
+      <a href="long.html" class="project-card p-6 rounded-2xl text-center text-white">
         <h2 class="font-semibold text-xl">Long Form Edits</h2>
       </a>
-      <a href="design.html" class="tilt-box bg-white text-[#841820] text-center p-6 rounded-2xl shadow-lg hover:shadow-2xl">
+      <a href="design.html" class="project-card p-6 rounded-2xl text-center text-white sm:translate-y-6">
         <h2 class="font-semibold text-xl">Designs</h2>
       </a>
-      <a href="client.html" class="tilt-box bg-white text-[#841820] text-center p-6 rounded-2xl shadow-lg hover:shadow-2xl">
+      <a href="client.html" class="project-card p-6 rounded-2xl text-center text-white">
         <h2 class="font-semibold text-xl">My Clients</h2>
       </a>
     </div>
   </section>
 
-  <!-- Script -->
+  <!-- ✅ Script -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const menuBtn = document.getElementById("menu-btn");
@@ -102,6 +124,5 @@
       });
     });
   </script>
-
 </body>
 </html>

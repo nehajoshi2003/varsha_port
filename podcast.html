@@ -6,7 +6,6 @@
   <title>Podcast Edit - Varsha Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
- <style>
     :root {
       --Background: #181A2F;
       --Primary: #242E49;
@@ -16,38 +15,36 @@
       --CTA-Dark: #541628;
       --Text: #ffffff;
     }
-    h1, h2, h3 {
-  font-family: 'RoxboroughCF', serif;
-  background-color: var(--Background);
-      color: var(--Text);
-}
 
+    h1, h2, h3 {
+      font-family: 'RoxboroughCF', serif;
+      color: var(--Text);
+    }
 
     @font-face {
-  font-family: 'RoxboroughCF';
-  src: url('./fonts/Roxborough\ CF.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+      font-family: 'RoxboroughCF';
+      src: url('./fonts/Roxborough CF.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
 
-/* Ivy Mode - TTF version */
-@font-face {
-  font-family: 'IvyMode';
-  src: url('./fonts/IvyMode-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}  
- body {
-  font-family: 'IvyMode', sans-serif;
-  background-color: var(--Background);
+    @font-face {
+      font-family: 'IvyMode';
+      src: url('./fonts/IvyMode-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      font-family: 'IvyMode', sans-serif;
+      background-color: var(--Background);
       color: var(--Text);
-}
+    }
 
     ::-webkit-scrollbar {
       display: none;
     }
 
-    /* Floating doodle mics */
     .mic-float {
       position: absolute;
       opacity: 0.1;
@@ -75,7 +72,7 @@
     }
   </style>
 </head>
-<body class="relative bg-gradient-to-br from-yellow-100 to-pink-100 text-gray-800 min-h-screen overflow-hidden">
+<body class="relative bg-gradient-to-br from-yellow-100 to-pink-100 text-gray-800 min-h-screen">
 
   <!-- 🎤 Floating mics -->
   <div class="mic-float" style="top: 30%; left: 5%;">🎙️</div>
@@ -84,34 +81,41 @@
   <div class="mic-float" style="bottom: 25%; left: 15%;">🎤</div>
   <div class="mic-float" style="bottom: 15%; right: 5%;">🎤</div>
   <div class="mic-float" style="bottom: 20%; right: 10%;">🎙️</div>
+
   <!-- ✅ NAVBAR -->
   <nav class="bg-[#181A2F] text-Text rounded-b-[20px] shadow-md px-6 md:px-12 py-5">
     <div class="flex justify-between items-center">
       <div class="flex items-center space-x-2">
         <span class="text-2xl font-light uppercase text-[#FDA481]">Varsha</span>
-        <span class="text-2xl font-medium uppercase">Portfolio</span>
+        <span class="text-2xl font-medium uppercase text-[#ffffff]">Portfolio</span>
       </div>
       <div class="md:hidden">
-        <button id="menu-btn" class="text-Text text-3xl">&#9776;</button>
+        <button id="menu-btn" class="text-white text-3xl">&#9776;</button>
       </div>
-      <div class="hidden md:flex space-x-10 text-[#ffffff] font-light" id="desktop-menu">
-        <a href="index.html" class="hover:text-[#841920]">HOME</a>
-        <a href="project.html" class="hover:text-[#841920]">PROJECTS</a>
-        <a href="resume.html" class="hover:text-[#841920]">RESUME</a>
+      <div class="hidden md:flex space-x-10 text-base font-light" id="desktop-menu">
+        <a href="index.html" class="hover:text-[#841920] text-white">HOME</a>
+        <a href="project.html" class="hover:text-[#841920] text-white">PROJECTS</a>
+        <a href="resume.html" class="hover:text-[#841920] text-white">RESUME</a>
       </div>
     </div>
-    <div id="mobile-menu" class="hidden flex-col mt-4 space-y-6 text-base font-light md:hidden">
-      <a href="index.html" class="hover:text-[#841920]">HOME</a>
-        <a href="project.html" class="hover:text-[#841920]">PROJECTS</a>
-        <a href="resume.html" class="hover:text-[#841920]">RESUME</a>
+    <div id="mobile-menu" class="hidden md:hidden px-4 py-6">
+      <header class="bg-[#37415C] rounded-lg p-4 text-center">
+        <nav class="flex justify-center gap-4 text-sm font-light mt-2">
+          <a href="index.html" class="hover:text-[#841920] text-white">HOME</a>
+          <a href="project.html" class="hover:text-[#841920] text-white">PROJECTS</a>
+          <a href="resume.html" class="hover:text-[#841920] text-white">RESUME</a>
+        </nav>
+      </header>
     </div>
   </nav>
 
   <!-- ✨ PAGE TITLE -->
-  <h1 class="text-4xl font-bold text-center mt-12 mb-6 animate-bounce">Podcast Edit</h1>
-
-  <!-- 🎥 EMBEDDED VIDEO -->
-  <div class="max-w-4xl mx-auto px-4 z-10 relative">
+  <h1 class="text-4xl font-bold text-center mt-12 mb-2 animate-bounce text-[#181A2F]">
+    Podcast Edit
+  </h1>
+  
+  <div class="mx-auto px-[50px] sm:px-10 md:px-20 lg:px-24 xl:px-32 pt-[1rem] max-w-4xl z-10 relative">
+  
     <div class="video-frame mb-6 rounded-xl overflow-hidden">
       <iframe 
         class="w-full h-[400px] rounded-xl"
@@ -124,10 +128,60 @@
     </div>
 
     <!-- ✍️ CAPTION -->
-    <p class="text-center text-lg font-medium text-gray-700 mb-16">
+    <p class="text-center text-lg font-medium text-gray-700 mb-6 px-2 sm:px-4">
       Here is my project-based work for <span class="font-bold text-black">Consuma Ai</span>:<br/>
       Podcast edit with <span class="font-bold text-black">Apoorva Uniyal</span>, Ex Brand Manager of <span class="font-bold text-black">Puma</span>.
     </p>
+    
+
+    <!-- ✅ NEW SECTION HEADING -->
+    <h2 class="text-3xl font-bold text-center text-[#841820] mb-10 mt-4 drop-shadow-md animate-bounce">
+      View More Podcast Reels Below
+    </h2>
+  </div>
+
+  <!-- 🎞️ REEL GRID -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-[2rem] pb-20">
+    <!-- Reel 1 -->
+    <div class="relative group rounded-xl shadow-md overflow-hidden zoom-hover">
+      <video autoplay loop muted playsinline class="w-full h-auto object-cover">
+        <source src="videos/GENZ REEL.mov" type="video/mp4" />
+      </video>
+      <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center flex-col opacity-0 group-hover:opacity-100 transition duration-300">
+        <p class="text-xl text-white font-semibold text-center px-4 mb-4">Click below to view full video</p>
+        <button onclick="openModal('videos/GENZ REEL.mov')" class="px-4 py-2 bg-white text-black rounded-full font-medium hover:bg-[#841920]">View Video Edit</button>
+      </div>
+    </div>
+
+    <!-- Reel 2 -->
+    <div class="relative group rounded-xl shadow-md overflow-hidden zoom-hover">
+      <video autoplay loop muted playsinline class="w-full h-auto object-cover">
+        <source src="videos/SNITCH REEL.mov" type="video/mp4" />
+      </video>
+      <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center flex-col opacity-0 group-hover:opacity-100 transition duration-300">
+        <p class="text-xl text-white font-semibold text-center px-4 mb-4">Click below to view full video</p>
+        <button onclick="openModal('videos/SNITCH REEL.mov')" class="px-4 py-2 bg-white text-black rounded-full font-medium hover:bg-[#841920]">View Video Edit</button>
+      </div>
+    </div>
+
+    <!-- Reel 3 -->
+    <div class="relative group rounded-xl shadow-md overflow-hidden zoom-hover">
+      <video autoplay loop muted playsinline class="w-full h-auto object-cover">
+        <source src="videos/VIRAT REEL.mov" type="video/mp4" />
+      </video>
+      <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center flex-col opacity-0 group-hover:opacity-100 transition duration-300">
+        <p class="text-xl text-white font-semibold text-center px-4 mb-4">Click below to view full video</p>
+        <button onclick="openModal('videos/VIRAT REEL.mov')" class="px-4 py-2 bg-white text-black rounded-full font-medium hover:bg-[#841920]">View Video Edit</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ MODAL VIDEO PLAYER -->
+  <div id="videoModal" class="fixed inset-0 bg-black/60 backdrop-blur-md flex items-center justify-center hidden z-50">
+    <div id="modalContent" class="relative w-full max-w-3xl mx-auto bg-Primary p-4 rounded-xl overflow-hidden fade-scale-enter text-Text">
+      <video id="modalVideo" controls autoplay class="w-full h-[600px] rounded-xl shadow-xl z-40"></video>
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-white text-3xl font-bold z-50 hover:scale-110 transition">&times;</button>
+    </div>
   </div>
 
   <!-- ✅ SCRIPT -->
@@ -138,6 +192,38 @@
       menuBtn.addEventListener("click", () => {
         mobileMenu.classList.toggle("hidden");
       });
+    });
+
+    function openModal(videoSrc) {
+      const modal = document.getElementById('videoModal');
+      const video = document.getElementById('modalVideo');
+      const modalContent = document.getElementById('modalContent');
+
+      video.src = videoSrc;
+      video.load();
+      video.play();
+
+      modal.classList.remove('hidden');
+      modalContent.classList.add('fade-scale-enter');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('videoModal');
+      const video = document.getElementById('modalVideo');
+      const modalContent = document.getElementById('modalContent');
+
+      video.pause();
+      video.currentTime = 0;
+      video.src = '';
+
+      modal.classList.add('hidden');
+      modalContent.classList.remove('fade-scale-enter');
+    }
+
+    document.getElementById('videoModal').addEventListener('click', function (e) {
+      if (e.target.id === 'videoModal') {
+        closeModal();
+      }
     });
   </script>
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Varsha Portfolio</title>
+    <title>Varsha Portfolio - Skills</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       :root {
@@ -18,106 +18,186 @@
         --HoverSkill: linear-gradient(135deg, #FFD8C0 0%, #FFB7A1 100%);
       }
 
-      @font-face {
-        font-family: 'IvyMode';
-        src: url('https://fonts.cdnfonts.com/s/92489/IvyMode-Regular.woff') format('woff');
-      }
+      /* Roxborough CF - TTF version */
+@font-face {
+  font-family: 'RoxboroughCF';
+  src: url('./fonts/Roxborough\ CF.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
-      @font-face {
-        font-family: 'RoxboroughCF';
-        src: url('https://fonts.cdnfonts.com/s/86389/Roxborough-CF-Regular.woff') format('woff');
-      }
+/* Ivy Mode - TTF version */
+@font-face {
+  font-family: 'IvyMode';
+  src: url('./fonts/IvyMode-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
       body {
-        font-family: 'IvyMode', 'RoxboroughCF', serif;
+        font-family: 'IvyMode', sans-serif;
         background-color: var(--Background);
         color: var(--Text);
+        margin: 0;
+        padding: 0;
       }
+  
+
+h1, h2, h3 {
+  font-family: 'RoxboroughCF', serif;
+}
 
       ::-webkit-scrollbar {
         display: none;
       }
 
-      .tilt-card {
-        transition: transform 0.4s ease, background 0.4s ease, color 0.4s ease;
+      .glass-card {
         background: var(--SkillRed);
-        color: white;
+        border-radius: 1rem;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
       }
 
-      .tilt-card:hover {
-        transform: rotateX(4deg) rotateY(4deg) scale(1.05);
-        background: var(--HoverSkill);
+      .glass-card:hover {
+        background: var(--CTA-Dark);
+        transform: scale(1.05);
+      }
+
+      .skill-icon {
+        background: #FDA481;
         color: #181A2F;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 9999px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        margin-bottom: 1rem;
       }
     </style>
   </head>
 
   <body class="min-h-screen overflow-x-hidden">
-    <!-- Navbar -->
-    <nav class="bg-[#242E49] text-white rounded-b-[20px] shadow-md px-6 md:px-12 py-5 z-50 relative">
-      <div class="flex justify-between items-center">
-        <div class="flex items-center space-x-2">
-          <span class="text-[#FDA481] text-2xl font-light uppercase">Varsha</span>
-          <span class="text-white text-2xl font-medium uppercase">Portfolio</span>
-        </div>
-        <div class="md:hidden">
-          <button id="menu-btn" class="text-white text-3xl">&#9776;</button>
-        </div>
-        <div class="hidden md:flex space-x-10 text-white text-base font-light" id="desktop-menu">
-          <a href="index.html" class="hover:text-[#841920]">HOME</a>
-          <a href="project.html" class="hover:text-[#841920]">PROJECTS</a>
-          <a href="resume.html" class="hover:text-[#841920]">RESUME</a>
-        </div>
-      </div>
-      <div id="mobile-menu" class="hidden flex-col mt-4 space-y-6 text-white text-base font-light md:hidden">
+  
+ <!-- ✅ NAVBAR -->
+<nav class="bg-Primary text-Text rounded-b-[20px] shadow-md px-6 md:px-12 py-5">
+  <div class="flex justify-between items-center">
+    <div class="flex items-center space-x-2">
+      <span class="text-2xl font-light uppercase text-[#FDA481]">Varsha</span>
+      <span class="text-2xl font-medium uppercase">Portfolio</span>
+    </div>
+
+    <!-- Hamburger Icon -->
+    <div class="md:hidden">
+      <button id="menu-btn" class="text-Text text-3xl">&#9776;</button>
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex space-x-10 text-base font-light" id="desktop-menu">
+      <a href="index.html" class="hover:text-[#841920]">HOME</a>
+      <a href="project.html" class="hover:text-[#841920]">PROJECTS</a>
+      <a href="resume.html" class="hover:text-[#841920]">RESUME</a>
+    </div>
+  </div>
+
+  <!-- ✅ Mobile Menu Dropdown -->
+  <div id="mobile-menu" class="hidden md:hidden px-4 py-6">
+    <header class="bg-[#37415C] rounded-lg p-4 text-center">
+     
+      <nav class="flex justify-center gap-4 text-sm font-light mt-2">
         <a href="index.html" class="hover:text-[#841920]">HOME</a>
         <a href="project.html" class="hover:text-[#841920]">PROJECTS</a>
         <a href="resume.html" class="hover:text-[#841920]">RESUME</a>
-      </div>
-    </nav>
+      </nav>
+    </header>
+  </div>
+</nav>
 
-    <!-- Main Content -->
-    <div class="max-w-6xl w-full mx-auto bg-Secondary bg-opacity-70 backdrop-blur-md shadow-2xl rounded-3xl p-10 mt-[10px]">
-      <h1 class="text-4xl font-extrabold text-center text-Accent mb-12 drop-shadow-xl">Skills</h1>
+    
+    <!-- Header -->
+    <header class="text-center pt-[1.5rem] pb-[2.5rem]">
+      <h1 class="text-4xl font-bold text-[#fca480]">Skills</h1>
+      
+    </header>
 
-      <!-- Skills -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center perspective-1000">
-        <div class="tilt-card p-6 rounded-2xl shadow-lg">
-          🎥 <p class="font-bold text-lg mt-2">Video Editing</p>
+    <!-- Skills Grid -->
+    <section class="px-[3rem] md:px-12 lg:px-20 pb-16">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="glass-card p-6 flex flex-col items-center text-center hover:cursor-pointer">
+          <div class="skill-icon">🎥</div>
+          <p class="font-semibold text-lg text-white">Video Editing</p>
         </div>
-        <div class="tilt-card p-6 rounded-2xl shadow-lg">
-          📈 <p class="font-bold text-lg mt-2">Marketing</p>
+
+        <div class="glass-card p-6 flex flex-col items-center text-center hover:cursor-pointer">
+          <div class="skill-icon">📈</div>
+          <p class="font-semibold text-lg text-white">Marketing</p>
         </div>
-        <div class="tilt-card p-6 rounded-2xl shadow-lg">
-          🎨 <p class="font-bold text-lg mt-2">Motion Graphics</p>
+
+        <div class="glass-card p-6 flex flex-col items-center text-center hover:cursor-pointer">
+          <div class="skill-icon">🎨</div>
+          <p class="font-semibold text-lg text-white">Motion Graphics</p>
         </div>
-        <div class="tilt-card p-6 rounded-2xl shadow-lg">
-          🎞 <p class="font-bold text-lg mt-2">Storytelling</p>
+
+        <div class="glass-card p-6 flex flex-col items-center text-center hover:cursor-pointer">
+          <div class="skill-icon">🎞</div>
+          <p class="font-semibold text-lg text-white">Storytelling</p>
         </div>
-        <div class="tilt-card p-6 rounded-2xl shadow-lg">
-          🎧 <p class="font-bold text-lg mt-2">Audio Syncing</p>
+
+        <div class="glass-card p-6 flex flex-col items-center text-center hover:cursor-pointer">
+          <div class="skill-icon">🎧</div>
+          <p class="font-semibold text-lg text-white">Audio Syncing</p>
         </div>
-        <div class="tilt-card p-6 rounded-2xl shadow-lg">
-          ✨ <p class="font-bold text-lg mt-2">Color Grading</p>
+
+        <div class="glass-card p-6 flex flex-col items-center text-center hover:cursor-pointer">
+          <div class="skill-icon">✨</div>
+          <p class="font-semibold text-lg text-white">Color Grading</p>
         </div>
       </div>
-
-      <!-- Tools -->
-      <h2 class="text-3xl font-semibold text-center text-Accent mt-16 mb-6 drop-shadow-md">🛠 Software I Use</h2>
-      <div class="flex flex-wrap justify-center gap-4">
-        <span class="bg-black text-white px-6 py-3 rounded-full shadow-lg hover:scale-105 hover:shadow-2xl transition-transform duration-300">Premiere Pro (Pr)</span>
-        <span class="bg-black text-white px-6 py-3 rounded-full shadow-lg hover:scale-105 hover:shadow-2xl transition-transform duration-300">After Effects (Ae)</span>
-        <span class="bg-black text-white px-6 py-3 rounded-full shadow-lg hover:scale-105 hover:shadow-2xl transition-transform duration-300">Photoshop (Ps)</span>
+      <div class="mt-[20px]">
+        <h3 class="text-3xl text-center font-semibold text-[#FDA481] mb-8 ">Software</h3>
+        <div class="flex flex-wrap justify-center gap-6">
+          <div class="w-[120px] h-[120px] bg-[#FDA481]/60 rounded-xl flex flex-col items-center justify-center hover:cursor-pointer text-center shadow-xl px-2 hover:bg-[#541728]">
+            <img src="images/pr.png" alt="Premiere Pro" class="w-10 h-10 mb-2">
+            <span class="text-white text-s font-light">Premiere Pro</span>
+          </div>
+          <div class="w-[120px] h-[120px] bg-[#FDA481]/60 rounded-xl flex flex-col items-center justify-center  hover:cursor-pointer text-center shadow-xl px-2 hover:bg-[#541728]">
+            <img src="images/ae.png" alt="After Effects" class="w-10 h-10 mb-2">
+            <span class="text-white text-s font-light text-center">After Effects</span>
+          </div>
+          <div class="w-[120px] h-[120px] bg-[#FDA481]/60 rounded-xl flex flex-col items-center justify-center hover:cursor-pointer text-center shadow-xl px-2 hover:bg-[#541728]">
+            <img src="images/ps.png" alt="Photoshop" class="w-10 h-10 mb-2">
+            <span class="text-white text-s font-light">Photoshop</span>
+          </div>
+          <div class="w-[120px] h-[120px] bg-[#FDA481]/60 rounded-xl flex flex-col items-center justify-center hover:cursor-pointer text-center shadow-xl px-2 hover:bg-[#541728]">
+            <img src="images/capcut.png" alt="CapCut" class="w-10 h-10 mb-2">
+            <span class="text-white text-s font-light">CapCut</span>
+          </div>
+          <div class="w-[120px] h-[120px] bg-[#FDA481]/60 rounded-xl flex flex-col items-center justify-center hover:cursor-pointer text-center shadow-xl px-2 hover:bg-[#541728]">
+            <img src="images/figma.png" alt="Figma" class="w-10 h-10 mb-2">
+            <span class="text-white text-s font-light">Figma</span>
+          </div>
+          <div class="w-[120px] h-[120px] bg-[#FDA481]/60 rounded-xl flex flex-col items-center justify-center hover:cursor-pointer text-center shadow-xl px-2 hover:bg-[#541728]">
+            <img src="images/canva.png" alt="Canva" class="w-10 h-10 mb-2">
+            <span class="text-white text-s font-light">Canva</span>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const menuBtn = document.getElementById("menu-btn");
         const mobileMenu = document.getElementById("mobile-menu");
+    
         menuBtn.addEventListener("click", () => {
           mobileMenu.classList.toggle("hidden");
         });
       });
     </script>
+    
   </body>
 </html>

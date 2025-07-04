@@ -32,7 +32,17 @@
   font-weight: normal;
   font-style: normal;
 }
+body {
+  font-family: 'IvyMode', sans-serif;
 
+  overflow-y: hidden;
+
+
+}
+
+h1, h2, h3 {
+  font-family: 'RoxboroughCF', serif;
+}
       .bg-Background {
         background-color: var(--Background);
       }
@@ -57,13 +67,7 @@
       .text-Accent {
         color: var(--Accent);
       }
-      body {
-  font-family: 'IvyMode', sans-serif;
-}
-
-h1, h2, h3 {
-  font-family: 'RoxboroughCF', serif;
-}
+      
 
 
       @media screen and (max-width: 1440px) {
@@ -87,13 +91,26 @@ h1, h2, h3 {
           height: 1024px;
         }
       }
+      /* For custom scrollbars in supported browsers */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: rgba(253, 164, 129, 0.6); /* Peach scroll */
+  border-radius: 9999px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
     </style>
   </head>
   <body class="bg-Background text-Text">
-    <div class="hidden md:flex justify-center items-start w-full h-screen overflow-auto bg-Background p-[20px]">
+    <div class="hidden md:flex justify-center items-start w-full min-h-screen bg-Background p-[20px] overflow-hidden">
+
       <div class="scale-desktop w-[1470px] h-[1024px] relative">
-        <div class="w-[1380px] h-24 left-[25px] top-[24px] absolute bg-Primary rounded-[20px] overflow-hidden">
-          <div class="w-[1343px] left-[18px] top-[42.03px] absolute inline-flex justify-between items-center">
+        <div class="w-[1380px] h-20 left-[25px] top-[24px] absolute bg-Primary rounded-[20px] overflow-hidden">
+          <div class="w-[1343px] left-[18px] top-[23.03px] absolute inline-flex justify-between items-center">
             <div class="justify-start">
               <span class="text-Text text-2xl font-light  uppercase text-[#fca480]">Varsha</span>
               <span></span>
@@ -107,68 +124,84 @@ h1, h2, h3 {
           </div>
         </div>
 
-        <div class="w-[473px] h-[460px] left-[24px] top-[146px] absolute bg-Primary rounded-[20px] overflow-hidden">
-          <div class="w-[475px top-[100px] absolute justify-start p-[30px]">
+        <div class="w-[473px] h-[180px] left-[24px] top-[135px] absolute bg-Primary rounded-[20px] overflow-hidden">
+          <div class="w-[475px top-[-18px] absolute justify-start p-[30px]">
             <span class="text-Text text-2xl font-bold  leading-[56px] text-[#fca480]">Video editor and Marketing Enthusiast </span>
-            <span class="text-Text text-xl font-light  leading-[56px]">- Mixing creativity with strategy to make videos that pop and marketing that clicks — turning ideas into eye-catching magic!</span>
+            <span class="text-Text text-l font-light  leading-[38px]">- Mixing creativity with strategy to make videos that pop and marketing that clicks — turning ideas into eye-catching magic!</span>
           </div>
           <div class="w-28 h-28 left-[416px] top-[34px] absolute overflow-hidden">
-            <div class="w-28 h-28 left-2 top-[0.04px] absolute"><img src="FLOWER-ICON.png"></div>
+            <div class="w-28 h-28 left-[23px] top-[0.04px] absolute"><img src="images/FLOWER-ICON.png"></div>
           </div>
         </div>
 
-        <div class="w-96 h-96 left-[512px] top-[144px] absolute bg-Primary rounded-[20px] overflow-hidden">
-          <div class="w-72 left-[24px] top-[130px] absolute justify-start text-Text text-l font-light  leading-normal">
+        <div class="w-96 h-[14rem] left-[512px] top-[137px] absolute bg-Primary rounded-[20px] overflow-hidden">
+          <div class="w-72 left-[24px] top-[49px] absolute justify-start text-Text text-l font-light  leading-normal">
             As a passionate Video Editor, I bring stories to life through the art of visual storytelling. From crafting seamless transitions to enhancing narratives with dynamic effects, I specialize in creating engaging and impactful content that resonates with audiences.
           </div>
-          <div class="w-9 h-9 left-[24px] top-[32px] absolute overflow-hidden">
-            <div class="w-9 h-9 left-0 top-0 absolute"><img src="Vector.png"></div>
-          </div>
-          <div class="left-[24px] top-[80px] absolute justify-start text-Accent text-3xl font-normal ">About me</div>
+        
+          <div class="left-[24px] top-[11px] absolute justify-start text-Accent text-3xl font-normal ">About me</div>
         </div>
 
-        <div class="w-96 h-[440px] left-[512px] top-[550px] absolute bg-Secondary rounded-[20px] overflow-hidden flex items-center justify-center shadow-xl">
-          <div class="p-6 w-full text-center">
-            <h1 class="text-3xl font-semibold text-Accent mt-4 mb-4">My Projects</h1>
-            <div class="flex flex-col items-center gap-2">
-              <a href="skills.html" class="w-64">
-                <h2 class="w-full transition duration-300 transform hover:scale-105 bg-Accent text-white py-2 rounded-full text-lg font-medium shadow hover:shadow-lg cursor-pointer">Skills</h2>
+        <div class="w-96 h-[305px] left-[512px] top-[380px] absolute bg-[#242e49] rounded-[20px] overflow-hidden flex items-center justify-center shadow-xl">
+          <div class="p-[0.5rem] w-full text-center overflow-y-auto max-h-[320px] scroll-smooth scrollbar-thin scrollbar-thumb-[#FDA481]/80 scrollbar-track-transparent">
+            
+            <!-- Heading -->
+            <h1 class="text-3xl font-semibold text-[#fca480] mt-4 mb-4">My Projects</h1>
+        
+            <!-- Buttons -->
+            <div class="flex flex-col items-center gap-3">
+        
+              <a href="skills.html" class="w-64 bg-[#841820]/40 backdrop-blur-md border border-[#841820]/60 rounded-xl py-2 px-4 text-white shadow-md transition-all duration-300 hover:scale-105 hover:bg-[#541728]">
+                <h2 class="text-lg font-medium">Skills</h2>
               </a>
-              <a href="experience.html" class="w-64">
-                <h2 class="w-full transition duration-300 transform hover:scale-105 bg-Accent text-white py-2 rounded-full text-lg font-medium shadow hover:shadow-lg cursor-pointer">Experiences</h2>
+        
+              <a href="experience.html" class="w-64 bg-[#841820]/40 backdrop-blur-md border border-[#841820]/60 rounded-xl py-2 px-4 text-white shadow-md transition-all duration-300 hover:scale-105 hover:bg-[#541728]">
+                <h2 class="text-lg font-medium">Experiences</h2>
               </a>
-              <a href="video.html" class="w-64">
-                <h2 class="w-full transition duration-300 transform hover:scale-105 bg-Accent text-white py-2 rounded-full text-lg font-medium shadow hover:shadow-lg cursor-pointer">Video Edits</h2>
+        
+              <a href="video.html" class="w-64 bg-[#841820]/40 backdrop-blur-md border border-[#841820]/60 rounded-xl py-2 px-4 text-white shadow-md transition-all duration-300 hover:scale-105 hover:bg-[#541728]">
+                <h2 class="text-lg font-medium">Video Edits</h2>
               </a>
-              <a href="podcast.html" class="w-64">
-                <h2 class="w-full transition duration-300 transform hover:scale-105 bg-Accent text-white py-2 rounded-full text-lg font-medium shadow hover:shadow-lg cursor-pointer">Podcast Edits</h2>
+        
+              <a href="podcast.html" class="w-64 bg-[#841820]/40 backdrop-blur-md border border-[#841820]/60 rounded-xl py-2 px-4 text-white shadow-md transition-all duration-300 hover:scale-105 hover:bg-[#541728]">
+                <h2 class="text-lg font-medium">Podcast Edits</h2>
               </a>
-              <a href="long.html" class="w-64">
-                <h2 class="w-full transition duration-300 transform hover:scale-105 bg-Accent text-white py-2 rounded-full text-lg font-medium shadow hover:shadow-lg cursor-pointer">Long Form Edits</h2>
+        
+              <a href="long.html" class="w-64 bg-[#841820]/40 backdrop-blur-md border border-[#841820]/60 rounded-xl py-2 px-4 text-white shadow-md transition-all duration-300 hover:scale-105 hover:bg-[#541728]">
+                <h2 class="text-lg font-medium">Long Form Edits</h2>
               </a>
-              <a href="design.html" class="w-64">
-                <h2 class="w-full transition duration-300 transform hover:scale-105 bg-Accent text-white py-2 rounded-full text-lg font-medium shadow hover:shadow-lg cursor-pointer">Designs</h2>
+        
+              <a href="design.html" class="w-64 bg-[#841820]/40 backdrop-blur-md border border-[#841820]/60 rounded-xl py-2 px-4 text-white shadow-md transition-all duration-300 hover:scale-105 hover:bg-[#541728]">
+                <h2 class="text-lg font-medium">Designs</h2>
               </a>
-              <a href="client.html" class="w-64">
-                <h2 class="w-full transition duration-300 transform hover:scale-105 bg-Accent text-white py-2 rounded-full text-lg font-medium shadow hover:shadow-lg cursor-pointer">My Clients</h2>
+        
+              <a href="client.html" class="w-64 bg-[#841820]/40 backdrop-blur-md border border-[#841820]/60 rounded-xl py-2 px-4 text-white shadow-md transition-all duration-300 hover:scale-105 hover:bg-[#541728] mb-[10px]">
+                <h2 class="text-lg font-medium">My Clients</h2>
               </a>
+        
             </div>
           </div>
         </div>
+        
+        
+    
+        
+        
 
-        <div class="w-96 h-[367px] left-[25px] top-[620px] absolute bg-CTA rounded-[20px] overflow-hidden flex flex-col items-center justify-center p-2 text-center">
+        <div class="w-96 h-[348px] left-[25px] top-[337px] absolute bg-CTA rounded-[20px] overflow-hidden flex flex-col items-center justify-center p-2 text-center">
           <h1 class="text-3xl text-white">Let's Connect</h1>
           <p class="text-white text-xl mb-2 mt-2">+91 7338178311</p>
           <p class="text-white text-xl mb-4"> varshasangolli2805@gmail.com</p>
           <textarea placeholder="Please message your queries..." class="w-full h-24 p-3 rounded-xl border border-pink-300 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-pink-400 resize-none mb-4"></textarea>
           <button type="submit" class="bg-Accent hover:bg-CTA-Dark text-white font-semibold py-2 px-6 rounded-xl transition-all duration-300">Send Message</button>
         </div>
-
-        <div class="w-80 h-[530px] left-[1030px] top-[261.78px] absolute rounded-[20px] overflow-hidden">
-          <img class="w-96 h-[556px] left-[-25px] top-[-19px] absolute" src="face.png" />
+        <div class="w-96 h-[490px] left-[1030px] top-[136.78px] absolute rounded-[20px] overflow-hidden">
+          <img src="images/face.png" class="w-full h-[90%] object-cover rounded-[20px]" />
         </div>
+        
+        
 
-        <div class="w-96 h-24 left-[960px] top-[890px] absolute bg-CTA-Dark rounded-[20px] overflow-hidden">
+        <div class="w-96 h-24 left-[1030px] top-[590px] absolute bg-CTA-Dark rounded-[20px] overflow-hidden">
           <div class="w-80 left-[30px] top-[37px] absolute inline-flex justify-between items-center">
             <div class="justify-start text-white text-base font-light  uppercase">Instagram</div>
             <div class="justify-start text-white text-base font-light  uppercase">Twitter</div>
@@ -194,6 +227,10 @@ h1, h2, h3 {
       As a passionate Video Editor, I bring stories to life through the art of visual storytelling. From crafting seamless transitions to enhancing narratives with dynamic effects, I specialize in creating engaging and impactful content that resonates with audiences.
     </p>
   </section>
+  <section class="flex justify-center my-4">
+    <img src="images/face.png" alt="Face" class="rounded-[20px] w-[320px] h-auto shadow-lg" />
+  </section>
+  
 
   <section class="bg-Secondary rounded-[20px] p-4 shadow-lg mx-4 my-6">
     <h2 class="text-2xl font-semibold text-center text-Accent mb-4">My Projects</h2>
@@ -244,11 +281,12 @@ h1, h2, h3 {
   </section>
   
 
-  <section class="bg-CTA-Dark rounded-lg p-4 text-center space-x-4 flex justify-center uppercase">
-    <span class="text-sm text-white">Instagram</span>
-    <span class="text-sm text-white">Twitter</span>
-    <span class="text-sm text-white">Linkedin</span>
+  <section class="bg-CTA-Dark rounded-lg p-4 text-center flex justify-center space-x-6 uppercase">
+    <a href="https://www.instagram.com/_varsha_s28/" target="_blank" class="text-sm text-white cursor-pointer">Instagram</a>
+    <a href="" target="_blank" class="text-sm text-white cursor-pointer">Twitter</a>
+    <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAAFccXmsBcQWhj4R3FQAw1XgkbV2_t8uKxYY&keywords=varsha%20sangolli&origin=RICH_QUERY_SUGGESTION&position=0&searchId=7a29196e-c282-4b70-83ba-d0f46086901b&sid=!w0&spellCorrectionEnabled=false" target="_blank" class="text-sm text-white cursor-pointer">LinkedIn</a>
   </section>
+  
 </div>
 
   </body>

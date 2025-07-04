@@ -1,114 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Designs - Varsha Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.cdnfonts.com/css/roxborough-cf" rel="stylesheet">
   <link href="https://fonts.cdnfonts.com/css/ivymode" rel="stylesheet">
+
   <style>
     :root {
-      --Background: #FFE0E0;
+      --Background: #181A2F;
       --Primary: #242E49;
+      --Secondary: #37415C;
       --Accent: #FDA481;
-      --Text: #1f1f1f;
-    }
-
-    @font-face {
-      font-family: 'IvyMode';
-      src: url('https://fonts.cdnfonts.com/s/92489/IvyMode-Regular.woff') format('woff');
-    }
-
-    @font-face {
-      font-family: 'RoxboroughCF';
-      src: url('https://fonts.cdnfonts.com/s/86389/Roxborough-CF-Regular.woff') format('woff');
+      --CTA: #841820;
+      --CTA-Dark: #541628;
+      --Text: #ffffff;
     }
 
     body {
       font-family: 'IvyMode', 'RoxboroughCF', serif;
+      background: var(--Background);
+      color: var(--Text);
     }
 
     ::-webkit-scrollbar {
       display: none;
     }
-
-    .fade-in {
-      animation: fadeIn 1s ease-out;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .design-card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .design-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    }
   </style>
 </head>
-<body class="bg-gradient-to-br from-[#FFE0E0] to-[#FDA481] text-[#1f1f1f]">
+<body>
 
-  <!-- ✅ NAVBAR -->
-  <nav class="bg-[#242E49] text-white rounded-b-[20px] shadow-md px-6 md:px-12 py-5">
+  <!-- ✅ Navbar -->
+  <nav class="shadow-md px-6 md:px-12 py-5" style="background-color: var(--Primary); color: var(--Text);">
     <div class="flex justify-between items-center">
       <div class="flex items-center space-x-2">
-        <span class="text-[#FDA481] text-2xl font-light uppercase">Varsha</span>
-        <span class="text-white text-2xl font-medium uppercase">Portfolio</span>
+        <span class="text-2xl font-light uppercase" style="color: var(--Accent);">Varsha</span>
+        <span class="text-2xl font-medium uppercase">Portfolio</span>
       </div>
+
       <div class="md:hidden">
-        <button id="menu-btn" class="text-white text-3xl">&#9776;</button>
+        <button id="menu-btn" class="text-3xl">&#9776;</button>
       </div>
-      <div class="hidden md:flex space-x-10 text-white text-base font-light" id="desktop-menu">
-        <a href="index.html" class="hover:text-[#841920]">HOME</a>
-        <a href="project.html" class="hover:text-[#841920]">PROJECTS</a>
-        <a href="resume.html" class="hover:text-[#841920]">RESUME</a>
+
+      <div class="hidden md:flex space-x-10 text-base font-light" id="desktop-menu">
+        <a href="index.html" class="hover:text-[var(--CTA)]">HOME</a>
+        <a href="project.html" class="hover:text-[var(--CTA)]">PROJECTS</a>
+        <a href="resume.html" class="hover:text-[var(--CTA)]">RESUME</a>
       </div>
     </div>
-    <div id="mobile-menu" class="hidden flex-col mt-4 space-y-6 text-white text-base font-light md:hidden">
-        <a href="index.html" class="hover:text-[#841920]">HOME</a>
-        <a href="project.html" class="hover:text-[#841920]">PROJECTS</a>
-        <a href="resume.html" class="hover:text-[#841920]">RESUME</a>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 py-6">
+      <nav class="flex flex-col items-center space-y-4 text-sm font-light">
+        <a href="index.html" class="hover:text-[var(--CTA)]">HOME</a>
+        <a href="project.html" class="hover:text-[var(--CTA)]">PROJECTS</a>
+        <a href="resume.html" class="hover:text-[var(--CTA)]">RESUME</a>
+      </nav>
     </div>
   </nav>
 
-  <!-- ✨ Title Section -->
-  <section class="text-center py-12 fade-in">
-    <h1 class="text-5xl font-extrabold mb-4 text-[#841820]">Design Showcase</h1>
-    <p class="text-lg text-gray-700">Dive into some of my creative design works.</p>
+  <!-- ✨ Title -->
+  <section class="text-center py-12">
+    <h1 class="text-5xl font-extrabold mb-4" style="color: var(--CTA);">Design Showcase</h1>
+    <p class="text-lg" style="color: var(--Accent);">Here are my designs in their original form.</p>
   </section>
 
-  <!-- 🎨 Design Gallery -->
-  <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto px-4 pb-20 fade-in">
-    <!-- Sample design card -->
-    <div class="design-card bg-[#242E49] text-white rounded-2xl overflow-hidden p-6 shadow-xl">
-      <img src="d1.png" alt="Design 1" class="w-full h-56 object-cover rounded-xl mb-4">
-     
-    </div>
-
-    <div class="design-card bg-[#242E49] text-white rounded-2xl overflow-hidden p-6 shadow-xl">
-      <img src="d2.png" alt="Design 2" class="w-full h-56 object-cover rounded-xl mb-4">
-    
-    </div>
-
-    <div class="design-card bg-[#242E49] text-white rounded-2xl overflow-hidden p-6 shadow-xl">
-      <img src="d3.png" alt="Design 3" class="w-full h-56 object-cover rounded-xl mb-4">
-     
+  <!-- 🖼️ Images Grid -->
+  <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto px-4 pb-20">
+    <img src="images/d1.png" alt="Design 1" class="mx-auto" />
+    <img src="images/Youtube Thumbnail .jpg" alt="Design 8" class="mx-auto" />
+    <img src="images/d2.png" alt="Design 2" class="mx-auto" />
+    <img src="images/d3.png" alt="Design 3" class="mx-auto" />
+    <img src="images/GenZ Fast fashion Reel Thumbnail.jpg" alt="Design 4" class="mx-auto" />
+    <img src="images/Snitch Reel thumbnail.jpg" alt="Design 5" class="mx-auto" />
+  
+    <img src="images/Virat Reel Thumbnail.jpg" alt="Design 7" class="mx-auto" />
   </section>
 
+  <!-- 🔧 Script -->
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const menuBtn = document.getElementById("menu-btn");
-      const mobileMenu = document.getElementById("mobile-menu");
-      menuBtn.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
+    document.getElementById("menu-btn").addEventListener("click", function () {
+      document.getElementById("mobile-menu").classList.toggle("hidden");
     });
   </script>
+
 </body>
 </html>
