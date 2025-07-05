@@ -68,29 +68,37 @@ h1, h2, h3 {
         color: var(--Accent);
       }
       
-
-
       @media screen and (max-width: 1440px) {
-        .scale-desktop {
-          transform: scale(0.9);
-          transform-origin: top left;
-          height: 1024px;
-        }
-      }
-      @media screen and (max-width: 1366px) {
-        .scale-desktop {
-          transform: scale(0.85);
-          transform-origin: top left;
-          height: 1024px;
-        }
-      }
-      @media screen and (max-width: 1280px) {
-        .scale-desktop {
-          transform: scale(0.8);
-          transform-origin: top left;
-          height: 1024px;
-        }
-      }
+  .scale-desktop {
+    transform: scale(0.9);
+    transform-origin: top left;
+    height: 100vh;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .scale-desktop {
+    transform: scale(0.85);
+    transform-origin: top left;
+    height: 100vh;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .scale-desktop {
+    transform: scale(0.8);
+    transform-origin: top left;
+    height: 100vh;
+  }
+
+}
+@media (min-width: 768px) {
+  html, body {
+    overflow: hidden;
+  }
+}
+
+
+
+     
       /* For custom scrollbars in supported browsers */
 .scrollbar-thin::-webkit-scrollbar {
   width: 6px;
@@ -106,7 +114,8 @@ h1, h2, h3 {
     </style>
   </head>
   <body class="bg-Background text-Text">
-    <div class="hidden md:block fixed inset-0 overflow-y-hidden z-0">
+    <div class="hidden md:block fixed inset-0 overflow-hidden z-0">
+
 
       <div class="scale-desktop w-[1470px] h-[1024px] mx-auto relative">
 
