@@ -19,11 +19,33 @@
       --Text: #ffffff;
     }
 
-    body {
-      font-family: 'IvyMode', 'RoxboroughCF', serif;
-      background: var(--Background);
-      color: var(--Text);
-    }
+    @font-face {
+  font-family: 'RoxboroughCF';
+  src: url('./fonts/Roxborough\ CF.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Ivy Mode - TTF version */
+@font-face {
+  font-family: 'IvyMode';
+  src: url('./fonts/IvyMode-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+      body {
+        font-family: 'IvyMode', sans-serif;
+        background-color: var(--Background);
+        color: var(--Text);
+        margin: 0;
+        padding: 0;
+      }
+  
+
+h1, h2, h3 {
+  font-family: 'RoxboroughCF', serif;
+}
 
     ::-webkit-scrollbar {
       display: none;
@@ -68,12 +90,12 @@
 
   <!-- ✨ Title -->
   <section class="text-center py-12">
-    <h1 class="text-5xl font-extrabold mb-4" style="color: var(--CTA);">Design Showcase</h1>
+    <h1 class="text-5xl font-extrabold mb-4 text-[#fadcd9]" >Design Showcase</h1>
     <p class="text-lg" style="color: var(--Accent);">Here are my designs in their original form.</p>
   </section>
 
   <!-- 🖼️ Images Grid -->
-  <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto px-4 pb-20">
+  <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto px-6 pb-20">
     <img src="images/d1.png" alt="Design 1" class="mx-auto" />
     <img src="images/Youtube Thumbnail .jpg" alt="Design 8" class="mx-auto" />
     <img src="images/d2.png" alt="Design 2" class="mx-auto" />

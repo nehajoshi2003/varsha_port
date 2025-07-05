@@ -106,9 +106,10 @@ h1, h2, h3 {
     </style>
   </head>
   <body class="bg-Background text-Text">
-    <div class="hidden md:flex justify-center items-start w-full min-h-screen bg-Background p-[20px] overflow-hidden">
+    <div class="hidden md:block fixed inset-0 overflow-hidden z-0">
 
-      <div class="scale-desktop w-[1470px] h-[1024px] relative">
+      <div class="scale-desktop w-[1470px] h-[1024px] mx-auto relative">
+
         <div class="w-[1380px] h-20 left-[25px] top-[24px] absolute bg-Primary rounded-[20px] overflow-hidden">
           <div class="w-[1343px] left-[18px] top-[23.03px] absolute inline-flex justify-between items-center">
             <div class="justify-start">
@@ -188,12 +189,42 @@ h1, h2, h3 {
         
         
 
-        <div class="w-96 h-[348px] left-[25px] top-[337px] absolute bg-CTA rounded-[20px] overflow-hidden flex flex-col items-center justify-center p-2 text-center">
-          <h1 class="text-3xl text-white">Let's Connect</h1>
-          <p class="text-white text-xl mb-2 mt-2">+91 7338178311</p>
-          <p class="text-white text-xl mb-4"> varshasangolli2805@gmail.com</p>
-          <textarea placeholder="Please message your queries..." class="w-full h-24 p-3 rounded-xl border border-pink-300 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-pink-400 resize-none mb-4"></textarea>
-          <button type="submit" class="bg-Accent hover:bg-CTA-Dark text-white font-semibold py-2 px-6 rounded-xl transition-all duration-300">Send Message</button>
+        <div class="w-96 h-auto left-[25px] top-[337px] absolute bg-CTA rounded-[20px] overflow-hidden flex flex-col items-center justify-center p-2 text-center">
+          <h1 class="text-2xl text-white">Let's Connect</h1>
+          <p class="text-white text-l  ">+91 7338178311</p>
+          <p class="text-white text-l mb-2">varshasangolli2805@gmail.com</p>
+        
+          <!-- ✅ Form -->
+          <form id="contact-form" class="w-full flex flex-col items-center">
+            <input 
+              type="text" 
+              name="user_name" 
+              placeholder="Your name" 
+              autocomplete="off"
+              required 
+              class="w-full p-3 rounded-xl mb-2 border border-pink-300 bg-white text-l text-[#841820]"
+            />
+            <input 
+              type="email" 
+              name="user_email" 
+              placeholder="Your email" 
+              required 
+              class="w-full p-3 rounded-xl mb-2 border border-pink-300 bg-white text-l  text-[#841820]"
+            />
+            <textarea 
+              name="message" 
+              placeholder="Please message your queries..." 
+              required 
+              class="w-full h-[4.5rem] p-3 rounded-xl border border-pink-300 bg-white text-sm resize-none mb-4 text-l  text-[#841820]"
+            ></textarea>
+        
+            <button 
+              type="submit" 
+              class="bg-Accent hover:bg-CTA-Dark text-white font-semibold py-2 px-4 rounded-xl transition-all duration-300"
+            >
+              Send Message
+            </button>
+          </form>
         </div>
         <div class="w-96 h-[490px] left-[1030px] top-[136.78px] absolute rounded-[20px] overflow-hidden">
           <img src="images/face.png" class="w-full h-[90%] object-cover rounded-[20px]" />
@@ -201,19 +232,25 @@ h1, h2, h3 {
         
         
 
-        <div class="w-96 h-24 left-[1030px] top-[590px] absolute bg-CTA-Dark rounded-[20px] overflow-hidden">
-          <div class="w-80 left-[30px] top-[37px] absolute inline-flex justify-between items-center">
-            <a href="https://www.instagram.com/_varsha_s28/" target="_blank" class="text-sm text-white cursor-pointer">Instagram</a>
-    <a href="" target="_blank" class="text-sm text-white cursor-pointer">Twitter</a>
-    <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAAFccXmsBcQWhj4R3FQAw1XgkbV2_t8uKxYY&keywords=varsha%20sangolli&origin=RICH_QUERY_SUGGESTION&position=0&searchId=7a29196e-c282-4b70-83ba-d0f46086901b&sid=!w0&spellCorrectionEnabled=false" target="_blank" class="text-sm text-white cursor-pointer">LinkedIn</a>
-          </div>
+        <div class="w-[220px] h-24 left-[1120px] top-[590px] absolute bg-CTA-Dark rounded-[20px] overflow-hidden flex items-center justify-between px-8">
+          <a href="https://www.instagram.com/_varsha_s28/" target="_blank" class="text-sm text-white cursor-pointer">
+            Instagram
+          </a>
+          <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAAFccXmsBcQWhj4R3FQAw1XgkbV2_t8uKxYY&keywords=varsha%20sangolli&origin=RICH_QUERY_SUGGESTION&position=0&searchId=7a29196e-c282-4b70-83ba-d0f46086901b&sid=!w0&spellCorrectionEnabled=false"
+             target="_blank"
+             class="text-sm text-white cursor-pointer">
+            LinkedIn
+          </a>
         </div>
+        
       </div>
     </div>
-  <!-- 📱 Mobile View -->
+  <!-- Mobile View -->
 <div class="md:hidden px-4 py-6 space-y-6">
   <header class="bg-Card rounded-lg p-4 text-center">
-    <h1 class="text-2xl font-medium uppercase heading text-Highlight">Varsha</h1>
+    <h1 class="text-2xl font-medium uppercase heading text-Highlight">Varsha <span class="text-[#FDA481]">Portfolio</span></h1>
+    <span></span>
+    
     <nav class="flex justify-center gap-4 text-sm font-light mt-2">
       <a href="index.html" class="hover:text-[#841920]">HOME</a>
       <a href="project.html" class="hover:text-[#841920]">PROJECTS</a>
@@ -233,7 +270,7 @@ h1, h2, h3 {
   
 
   <section class="bg-Secondary rounded-[20px] p-4 shadow-lg mx-4 my-6">
-   
+    <h2 class="text-2xl font-semibold text-center text-Accent mb-4">My Projects</h2>
     <div class="block md:hidden px-4 mt-6">
       <div class="bg-[#242e49] rounded-2xl shadow-xl p-6">
         <h1 class="text-2xl font-semibold text-[#fca480] text-center mb-4">My Projects</h1>
@@ -251,35 +288,76 @@ h1, h2, h3 {
   </section>
   
 
-  <section class="bg-CTA rounded-[20px] p-4 mx-4 my-6 text-center  shadow-lg">
-    <h1 class="text-2xl text-white">Let's Connect</h1>
+  <section class="bg-CTA rounded-[20px] p-6 mx-4 my-6 text-center shadow-lg">
+    <h1 class="text-2xl text-white font-semibold">Let's Connect</h1>
     <p class="text-white text-base mt-2 mb-1">+91 7338178311</p>
-    <p class="text-white text-base mb-4"> varshasangolli2805@gmail.com
-      
-     </p>
-    
+    <p class="text-white text-base mb-4">varshasangolli2805@gmail.com</p>
+  
+    <!-- ✅ Name Input -->
+    <input 
+      type="text" 
+      name="user_name" 
+      placeholder="Your name" 
+      required 
+      autocomplete="off"
+      class="w-full p-3 rounded-xl mb-3 border border-pink-300 bg-white text-sm text-l text-[#841820]"
+    />
+  
+    <!-- ✅ Email Input -->
+    <input 
+      type="email" 
+      name="user_email" 
+      placeholder="Your email" 
+      required 
+      autocomplete="off"
+      class="w-full p-3 rounded-xl mb-3 border border-pink-300 bg-white text-l text-[#841820]"
+    />
+  
+    <!-- ✅ Message Textarea -->
     <textarea 
+      name="message"
       placeholder="Please message your queries..." 
-      class="w-full h-24 p-3 rounded-xl border border-pink-300 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-pink-400 resize-none mb-4"
+      required
+      class="w-full h-28 p-3 rounded-xl border border-pink-300 bg-white text-l text-[#841820] focus:outline-none focus:ring-2 focus:ring-pink-400 resize-none mb-4"
     ></textarea>
-    
+  
+    <!-- ✅ Submit Button -->
     <button 
       type="submit" 
-      class="w-full bg-Accent hover:bg-CTA-Dark text-white font-semibold py-2 px-6 rounded-xl transition-all duration-300"
+      class="w-full bg-Accent hover:bg-CTA-Dark text-white font-semibold py-2 px-6 rounded-xl transition-all duration-300 "
     >
       Send Message
     </button>
   </section>
   
+  
 
-  <section class="bg-CTA-Dark rounded-lg p-4 text-center flex justify-center space-x-6 uppercase">
+  <section class="bg-CTA-Dark rounded-lg p-6 text-center flex justify-center space-x-6 uppercase">
     <a href="https://www.instagram.com/_varsha_s28/" target="_blank" class="text-sm text-white cursor-pointer">Instagram</a>
-    <a href="" target="_blank" class="text-sm text-white cursor-pointer">Twitter</a>
+   
     <a href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAAFccXmsBcQWhj4R3FQAw1XgkbV2_t8uKxYY&keywords=varsha%20sangolli&origin=RICH_QUERY_SUGGESTION&position=0&searchId=7a29196e-c282-4b70-83ba-d0f46086901b&sid=!w0&spellCorrectionEnabled=false" target="_blank" class="text-sm text-white cursor-pointer">LinkedIn</a>
   </section>
   
 </div>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("x0lRDc4S-T19Xop1h"); // Your EmailJS Public Key
+  })();
+</script>
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
 
+    emailjs.sendForm('service_7ehzwpm', 'template_3oplzks', this)
+      .then(function(response) {
+        alert("✅ Message sent to Varsha successfully!");
+      }, function(error) {
+        alert("❌ Failed to send message. Please try again.");
+        console.error(error);
+      });
+  });
+</script>
   </body>
 </html>
 

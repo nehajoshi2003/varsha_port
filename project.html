@@ -9,16 +9,30 @@
   <link href="https://fonts.cdnfonts.com/css/ivymode" rel="stylesheet">
   <style>
     @font-face {
-      font-family: 'IvyMode';
-      src: url('https://fonts.cdnfonts.com/s/92489/IvyMode-Regular.woff') format('woff');
-    }
-    @font-face {
-      font-family: 'RoxboroughCF';
-      src: url('https://fonts.cdnfonts.com/s/86389/Roxborough-CF-Regular.woff') format('woff');
-    }
-    body {
-      font-family: 'IvyMode', 'RoxboroughCF', serif;
-    }
+  font-family: 'RoxboroughCF';
+  src: url('./fonts/Roxborough\ CF.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Ivy Mode - TTF version */
+@font-face {
+  font-family: 'IvyMode';
+  src: url('./fonts/IvyMode-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: 'IvyMode', sans-serif;
+
+
+
+
+}
+
+h1, h2, h3 {
+  font-family: 'RoxboroughCF', serif;
+}
     ::-webkit-scrollbar {
       display: none;
     }
@@ -90,33 +104,35 @@
   </nav>
 
   <!-- ✅ Projects Section -->
-  <section class="animated-bg rounded-[20px] px-6 py-16 shadow-2xl max-w-7xl mx-auto mt-10 relative overflow-hidden">
-    <h2 class="text-4xl font-bold text-center text-[#FDA481] mb-12 drop-shadow-xl z-10 relative">My Projects</h2>
-
-    <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 z-10 relative">
-      <a href="skills.html" class="project-card p-6 rounded-2xl text-center text-white">
-        <h2 class="font-semibold text-xl">Skills</h2>
+  <section class="animated-bg rounded-[20px] px-6 py-16 shadow-2xl max-w-7xl mx-auto mt-10 overflow-hidden">
+    <h2 class="text-4xl font-bold text-center text-[#FDA481] mb-16 drop-shadow-xl font-serif">My Projects</h2>
+  
+    <div class="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <a href="skills.html" class="project-card p-8 rounded-2xl text-center text-white h-40 flex items-center justify-center">
+        <h3 class="font-semibold text-2xl tracking-wide">Skills</h3>
       </a>
-      <a href="experience.html" class="project-card p-6 rounded-2xl text-center text-white sm:translate-y-6">
-        <h2 class="font-semibold text-xl">Experiences</h2>
+      <a href="experience.html" class="project-card p-8 rounded-2xl text-center text-white h-40 flex items-center justify-center">
+        <h3 class="font-semibold text-2xl tracking-wide">Experiences</h3>
       </a>
-      <a href="video.html" class="project-card p-6 rounded-2xl text-center text-white">
-        <h2 class="font-semibold text-xl">Video Edits</h2>
+      <a href="video.html" class="project-card p-8 rounded-2xl text-center text-white h-40 flex items-center justify-center">
+        <h3 class="font-semibold text-2xl tracking-wide">Video Edits</h3>
       </a>
-      <a href="podcast.html" class="project-card p-6 rounded-2xl text-center text-white sm:translate-y-6">
-        <h2 class="font-semibold text-xl">Podcast Edits</h2>
+      <a href="podcast.html" class="project-card p-8 rounded-2xl text-center text-white h-40 flex items-center justify-center">
+        <h3 class="font-semibold text-2xl tracking-wide">Podcast Edits</h3>
       </a>
-      <a href="long.html" class="project-card p-6 rounded-2xl text-center text-white">
-        <h2 class="font-semibold text-xl">Long Form Edits</h2>
+      <a href="long.html" class="project-card p-8 rounded-2xl text-center text-white h-40 flex items-center justify-center">
+        <h3 class="font-semibold text-2xl tracking-wide">Long Form Edits</h3>
       </a>
-      <a href="design.html" class="project-card p-6 rounded-2xl text-center text-white sm:translate-y-6">
-        <h2 class="font-semibold text-xl">Designs</h2>
+      <a href="design.html" class="project-card p-8 rounded-2xl text-center text-white h-40 flex items-center justify-center">
+        <h3 class="font-semibold text-2xl tracking-wide">Designs</h3>
       </a>
-      <a href="client.html" class="project-card p-6 rounded-2xl text-center text-white">
-        <h2 class="font-semibold text-xl">My Clients</h2>
+      <a href="client.html" class="project-card p-8 rounded-2xl text-center text-white h-40 flex items-center justify-center
+        sm:col-start-1 sm:col-end-3 lg:col-start-2">
+        <h3 class="font-semibold text-2xl tracking-wide">My Clients</h3>
       </a>
     </div>
   </section>
+  
 
   <!-- ✅ Script -->
   <script>
